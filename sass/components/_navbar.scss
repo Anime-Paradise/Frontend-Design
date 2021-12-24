@@ -1,0 +1,34 @@
+.navbar {
+    height: 100vh;
+    width: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0px 5px;
+    // justify-content: center;
+
+    .col {
+        height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        margin: 5px;
+        box-sizing: border-box;
+        cursor: pointer;
+        border-radius: 8px;
+        transition: background 0.1s;
+
+        span {
+            color: $light_grey;
+        }
+    }
+    
+    .active span {
+        color: #fff;
+    }
+
+    .col:hover {
+        background: $mild_dark_purple;
+    }
+}

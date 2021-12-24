@@ -1,1 +1,135 @@
-/* No CSS *//*# sourceMappingURL=app.css.map */
+body {
+  background: #171D2A;
+}
+
+.app {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.app .main {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.navbar {
+  height: 100vh;
+  width: 60px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0px 5px;
+}
+
+.navbar .col {
+  height: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  margin: 5px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  cursor: pointer;
+  border-radius: 8px;
+  -webkit-transition: background 0.1s;
+  transition: background 0.1s;
+}
+
+.navbar .col span {
+  color: #96A7AF;
+}
+
+.navbar .active span {
+  color: #fff;
+}
+
+.navbar .col:hover {
+  background: #232935;
+}
+
+.header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 80px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 10px;
+}
+
+.header .logo {
+  margin-right: 20px;
+}
+
+.header .search_bar {
+  height: 50px;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.header .search_bar .search_input {
+  background: #232935;
+  border: none;
+  width: 400px;
+  border-radius: 12px;
+  margin: 0px 10px;
+  -webkit-transition: -webkit-box-shadow 0.1s;
+  transition: -webkit-box-shadow 0.1s;
+  transition: box-shadow 0.1s;
+  transition: box-shadow 0.1s, -webkit-box-shadow 0.1s;
+  padding: 0px 20px;
+  color: #E2E2E2;
+}
+
+.header .search_bar .search_input:focus {
+  -webkit-box-shadow: 0 0 0px 3px #2329355b;
+          box-shadow: 0 0 0px 3px #2329355b;
+}
+
+.header .search_bar .search_btn {
+  background: #8401FF;
+  color: #FFFFFF;
+  border: none;
+  padding: 0px 20px;
+  border-radius: 12px;
+}
+
+.header .search_bar .search_btn:active {
+  background: #6e00d4;
+}
+
+.header .profile_btn {
+  background: transparent;
+  border: none;
+  color: #fff;
+  padding: 15px 17px;
+  border-radius: 50%;
+  -webkit-transition: background 0.1s;
+  transition: background 0.1s;
+}
+
+.header .profile_btn:active {
+  background: #373f535e;
+}
+/*# sourceMappingURL=app.css.map */
