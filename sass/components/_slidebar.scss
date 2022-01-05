@@ -1,0 +1,64 @@
+.slidebar {
+    background-size: cover;
+    border-radius: 12px;
+    display: flex;
+    position: relative;
+    color: #96A7AF;
+    width: 100%;
+    min-height: 210px;
+
+    .filter_layer {
+        position: absolute;
+        background: #232935e3;
+        height: 100%;
+        width: 100%;
+        z-index: -1;
+        backdrop-filter: blur(30px);
+        border-radius: 12px;
+    }
+
+    .background {
+        background: url(https://cachecow.eu/min/mal/1928/117620.jpg) center center;
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        z-index: -2;
+        background-size: cover;
+        border-radius: 50px;
+    }
+
+    .cover {
+        width: 400px;
+        background: url(https://cachecow.eu/min/mal/1928/117620.jpg) center center;
+        background-size: cover;
+        border-radius: 12px 0px 0px 12px;
+    }
+    
+    .info {
+        padding: 25px 30px 25px 30px;
+        text-align: justify;
+        display: flex;
+        flex-direction: column;
+
+        .heading {
+            font-size: 20px;
+            font-weight: 600;
+        }
+
+        .description {
+            padding: 10px 0px;
+            flex: 1;
+        }
+    
+        .change_btn {
+            display: flex;
+            justify-content: flex-end;
+            font-size: 15px;
+            cursor: pointer;
+            
+            span:hover{
+                color: #dfe5e8;
+            }
+        }
+    }
+}

@@ -14,6 +14,25 @@ body {
           flex: 1;
 }
 
+.app .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+}
+
+.app .container .main_container {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.app .container .side_container {
+  -webkit-box-flex: 0.45;
+      -ms-flex: 0.45;
+          flex: 0.45;
+}
+
 .navbar {
   height: 100vh;
   width: 60px;
@@ -131,5 +150,84 @@ body {
 
 .header .profile_btn:active {
   background: #373f535e;
+}
+
+.slidebar {
+  background-size: cover;
+  border-radius: 12px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  color: #96A7AF;
+  width: 100%;
+  min-height: 210px;
+}
+
+.slidebar .filter_layer {
+  position: absolute;
+  background: #232935e3;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  -webkit-backdrop-filter: blur(30px);
+          backdrop-filter: blur(30px);
+  border-radius: 12px;
+}
+
+.slidebar .background {
+  background: url(https://cachecow.eu/min/mal/1928/117620.jpg) center center;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  z-index: -2;
+  background-size: cover;
+  border-radius: 50px;
+}
+
+.slidebar .cover {
+  width: 400px;
+  background: url(https://cachecow.eu/min/mal/1928/117620.jpg) center center;
+  background-size: cover;
+  border-radius: 12px 0px 0px 12px;
+}
+
+.slidebar .info {
+  padding: 25px 30px 25px 30px;
+  text-align: justify;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.slidebar .info .heading {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.slidebar .info .description {
+  padding: 10px 0px;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.slidebar .info .change_btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.slidebar .info .change_btn span:hover {
+  color: #dfe5e8;
 }
 /*# sourceMappingURL=app.css.map */
