@@ -19,7 +19,7 @@
             width: 400px;
             border-radius: 12px;
             margin: 0px 10px;
-            transition: box-shadow 0.1s;
+            transition: box-shadow 0.2s;
             padding: 0px 20px;
             color: $shaded_white;
         }
@@ -34,10 +34,12 @@
             border: none;
             padding: 0px 20px;
             border-radius: 12px;
+            transition: box-shadow 0.2s, background 0.2s;
         }
 
         .search_btn:active {
             background: $purple_dark;
+            box-shadow: 0 0 0px 3px $purple_dark_opacity;
         }
     }
 
@@ -47,7 +49,7 @@
         color: #fff;
         padding: 15px 17px;
         border-radius: 50%;
-        transition: background 0.1s;
+        transition: background 0.2s;
     }
     .profile_btn:active {
         background: $grey_opacity;

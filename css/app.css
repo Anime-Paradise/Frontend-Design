@@ -113,10 +113,10 @@ body {
   width: 400px;
   border-radius: 12px;
   margin: 0px 10px;
-  -webkit-transition: -webkit-box-shadow 0.1s;
-  transition: -webkit-box-shadow 0.1s;
-  transition: box-shadow 0.1s;
-  transition: box-shadow 0.1s, -webkit-box-shadow 0.1s;
+  -webkit-transition: -webkit-box-shadow 0.2s;
+  transition: -webkit-box-shadow 0.2s;
+  transition: box-shadow 0.2s;
+  transition: box-shadow 0.2s, -webkit-box-shadow 0.2s;
   padding: 0px 20px;
   color: #E2E2E2;
 }
@@ -132,10 +132,16 @@ body {
   border: none;
   padding: 0px 20px;
   border-radius: 12px;
+  -webkit-transition: background 0.2s, -webkit-box-shadow 0.2s;
+  transition: background 0.2s, -webkit-box-shadow 0.2s;
+  transition: box-shadow 0.2s, background 0.2s;
+  transition: box-shadow 0.2s, background 0.2s, -webkit-box-shadow 0.2s;
 }
 
 .header .search_bar .search_btn:active {
   background: #6e00d4;
+  -webkit-box-shadow: 0 0 0px 3px #6d00d427;
+          box-shadow: 0 0 0px 3px #6d00d427;
 }
 
 .header .profile_btn {
@@ -144,8 +150,8 @@ body {
   color: #fff;
   padding: 15px 17px;
   border-radius: 50%;
-  -webkit-transition: background 0.1s;
-  transition: background 0.1s;
+  -webkit-transition: background 0.2s;
+  transition: background 0.2s;
 }
 
 .header .profile_btn:active {
@@ -162,16 +168,15 @@ body {
   color: #96A7AF;
   width: 100%;
   min-height: 210px;
+  overflow: hidden;
 }
 
 .slidebar .filter_layer {
   position: absolute;
-  background: #232935e3;
+  background: #2329355b;
   height: 100%;
   width: 100%;
   z-index: -1;
-  -webkit-backdrop-filter: blur(30px);
-          backdrop-filter: blur(30px);
   border-radius: 12px;
 }
 
@@ -183,6 +188,9 @@ body {
   z-index: -2;
   background-size: cover;
   border-radius: 50px;
+  -webkit-filter: blur(30px);
+          filter: blur(30px);
+  opacity: 0.4;
 }
 
 .slidebar .cover {
@@ -228,6 +236,40 @@ body {
 }
 
 .slidebar .info .change_btn span:hover {
-  color: #dfe5e8;
+  color: #E2E2E2;
+}
+
+.btn {
+  background: #232935;
+  color: #E2E2E2;
+  border: none;
+  border-radius: 8px;
+  -webkit-transition: background 0.2s, -webkit-box-shadow 0.2s;
+  transition: background 0.2s, -webkit-box-shadow 0.2s;
+  transition: box-shadow 0.2s, background 0.2s;
+  transition: box-shadow 0.2s, background 0.2s, -webkit-box-shadow 0.2s;
+  padding: 10px 20px;
+}
+
+.btn .active {
+  background: #8401FF;
+}
+
+.btn:active {
+  background: #6e00d4;
+  -webkit-box-shadow: 0 0 0px 3px #6d00d427;
+          box-shadow: 0 0 0px 3px #6d00d427;
+}
+
+.btn:hover {
+  color: #E2E2E2;
+}
+
+.btn:visited {
+  color: #E2E2E2;
+}
+
+.btn:focus {
+  color: #E2E2E2;
 }
 /*# sourceMappingURL=app.css.map */

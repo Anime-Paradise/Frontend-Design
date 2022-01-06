@@ -3,17 +3,17 @@
     border-radius: 12px;
     display: flex;
     position: relative;
-    color: #96A7AF;
+    color: $light_grey;
     width: 100%;
     min-height: 210px;
+    overflow: hidden;
 
     .filter_layer {
         position: absolute;
-        background: #232935e3;
+        background: $mild_dark_purple_opacity;
         height: 100%;
         width: 100%;
         z-index: -1;
-        backdrop-filter: blur(30px);
         border-radius: 12px;
     }
 
@@ -25,6 +25,8 @@
         z-index: -2;
         background-size: cover;
         border-radius: 50px;
+        filter: blur(30px);
+        opacity: 0.4;
     }
 
     .cover {
@@ -57,7 +59,7 @@
             cursor: pointer;
             
             span:hover{
-                color: #dfe5e8;
+                color: $shaded_white;
             }
         }
     }
