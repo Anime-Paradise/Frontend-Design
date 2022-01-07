@@ -189,7 +189,7 @@ body {
 }
 
 .slidebar .background {
-  background: url(https://cachecow.eu/min/mal/1928/117620.jpg) center center;
+  background: url(https://cdn.myanimelist.net/images/anime/1386/100624.jpg) center center;
   position: absolute;
   height: 100%;
   width: 100%;
@@ -203,7 +203,7 @@ body {
 
 .slidebar .cover {
   width: 400px;
-  background: url(https://cachecow.eu/min/mal/1928/117620.jpg) center center;
+  background: url(https://cdn.myanimelist.net/images/anime/1386/100624.jpg) center center;
   background-size: cover;
   border-radius: 12px 0px 0px 12px;
 }
@@ -328,10 +328,11 @@ body {
   cursor: pointer;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: auto auto auto auto auto;
-      grid-template-columns: auto auto auto auto auto;
+  -ms-grid-columns: 1fr 1fr 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   grid-column-gap: 10px;
   grid-row-gap: 10px;
+  grid-auto-columns: 1fr;
 }
 
 .anime_card_gallary .anime_card {
@@ -374,7 +375,6 @@ body {
 .anime_card_gallary .anime_card .cover {
   width: 100%;
   height: 200px;
-  background: url(https://cachecow.eu/min/mal/1928/117620.jpg) center center;
   background-size: cover;
   border-radius: 8px 8px 0px 0px;
 }
@@ -384,6 +384,8 @@ body {
   color: #FFFFFF;
   font-weight: 500;
   font-size: 12px;
+  text-align: center;
+  vertical-align: middle;
 }
 
 .anime_card_gallary .anime_card .title .type {
