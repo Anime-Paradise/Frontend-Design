@@ -239,6 +239,25 @@ body {
   color: #E2E2E2;
 }
 
+.btn_cluster {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 15px 0px;
+}
+
+.btn_cluster button {
+  border-radius: 0px;
+}
+
+.btn_cluster button:first-child {
+  border-radius: 8px 0px 0px 8px;
+}
+
+.btn_cluster button:last-child {
+  border-radius: 0px 8px 8px 0px;
+}
+
 .btn {
   background: #232935;
   color: #E2E2E2;
@@ -251,8 +270,9 @@ body {
   padding: 10px 20px;
 }
 
-.btn .active {
-  background: #8401FF;
+.btn:hover {
+  background: #2329355b;
+  color: #E2E2E2;
 }
 
 .btn:active {
@@ -261,7 +281,7 @@ body {
           box-shadow: 0 0 0px 3px #6d00d427;
 }
 
-.btn:hover {
+.btn:focus {
   color: #E2E2E2;
 }
 
@@ -269,7 +289,25 @@ body {
   color: #E2E2E2;
 }
 
-.btn:focus {
+.btn.active {
+  background: #8401FF;
+}
+
+.btn.active:active {
+  background: #6e00d4;
+  -webkit-box-shadow: 0 0 0px 3px #6d00d427;
+          box-shadow: 0 0 0px 3px #6d00d427;
+}
+
+.btn.active:hover {
+  color: #E2E2E2;
+}
+
+.btn.active:focus {
+  color: #E2E2E2;
+}
+
+.btn.active:visited {
   color: #E2E2E2;
 }
 /*# sourceMappingURL=app.css.map */

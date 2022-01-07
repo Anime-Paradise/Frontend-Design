@@ -1,3 +1,20 @@
+.btn_cluster {
+    display: flex;
+    margin: 15px 0px;
+
+    button {
+        border-radius: 0px;
+    }
+
+    button:first-child {
+        border-radius: 8px 0px 0px 8px;
+    }
+    
+    button:last-child {
+        border-radius: 0px 8px 8px 0px;
+    }
+}
+
 .btn {
     background: $mild_dark_purple;
     color: $shaded_white;
@@ -5,22 +22,43 @@
     border-radius: 8px;
     transition: box-shadow 0.2s, background 0.2s;
     padding: 10px 20px;
+
+    &:hover {
+        background: $mild_dark_purple_opacity;
+        color: $shaded_white;
+    }
+
+    &:active {
+        background: $purple_dark;
+        box-shadow: 0 0 0px 3px $purple_dark_opacity;
+    }
+
+    &:focus {
+        color: $shaded_white;
+    }
+
+    &:visited {
+        color: $shaded_white;
+    }
 }
 
-.btn .active {
+.btn.active {
     background: $purple;
-}
 
-.btn:active {
-    background: $purple_dark;
-    box-shadow: 0 0 0px 3px $purple_dark_opacity;
-}
-.btn:hover {
-    color: $shaded_white;
-}
-.btn:visited {
-    color: $shaded_white;
-}
-.btn:focus {
-    color: $shaded_white;
+    &:active {
+        background: $purple_dark;
+        box-shadow: 0 0 0px 3px $purple_dark_opacity;
+    }
+
+    &:hover {
+        color: $shaded_white;
+    }
+
+    &:focus {
+        color: $shaded_white;
+    }
+
+    &:visited {
+        color: $shaded_white;
+    }
 }
