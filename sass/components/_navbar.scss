@@ -17,16 +17,22 @@
         box-sizing: border-box;
         cursor: pointer;
         border-radius: 8px;
-        transition: background 0.1s;
+        transition: background 0.2s, box-shadow 0.2s;
 
         span {
             color: $light_grey;
         }
+
+        &:active {
+            box-shadow: 0 0 0px 3px $mild_dark_purple_mild_opacity;
+        }
     }
     
-    .active span {
-        color: #fff;
-    }
+    .col.active {
+        span {
+            color: #fff;
+        }
+    } 
 
     .col:hover {
         background: $mild_dark_purple;

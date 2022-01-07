@@ -1,0 +1,58 @@
+.anime_card_gallary {
+    display: flex;
+    cursor: pointer;
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+
+    .anime_card {
+        width: 100%;
+        background: $mild_dark_purple;
+        position: relative;
+        border-radius: 8px;
+        transition: box-shadow 0.2s, filter 0.2s;
+
+        &:hover {
+            box-shadow: 0 0 0px 3px $mild_dark_purple_mild_opacity;
+            filter: brightness(110%);
+        }
+
+        &:active {
+            filter: brightness(100%);
+        }
+    
+        .rating {
+            position: absolute;
+            color: $white;
+            background: $mild_dark_purple;
+            padding: 3px 10px;
+            border-radius: 7px 0px 8px 0px;
+            font-weight: 500;
+            font-size: 12px;
+
+            span {
+                color: $yellow;
+            }
+        }
+    
+        .cover {
+            width: 100%;
+            height: 200px;
+            background: url(https://cachecow.eu/min/mal/1928/117620.jpg) center center;
+            background-size: cover;
+            border-radius: 8px 8px 0px 0px;
+        }
+    
+        .title {
+            padding: 15px 20px;
+            color: $white;
+            font-weight: 500;
+            font-size: 12px;
+    
+            .type {
+                color: $yellow;
+            }
+        }
+    }
+}
