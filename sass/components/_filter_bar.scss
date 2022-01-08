@@ -1,0 +1,40 @@
+.filter_bar {
+    background-color: $mild_dark_purple;
+    color: $white;
+    padding: 20px;
+    box-sizing: border-box;
+    border-radius: 12px;
+
+    .release_date {
+        display: grid;
+        grid-template-columns: auto auto auto;
+        grid-column-gap: 10px;
+        
+        .year .title {
+            margin-bottom: 5px;
+        }
+
+        .season .title {
+            margin-bottom: 5px;
+        }
+
+        .submit {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            flex: 1;
+
+            button {
+                @include default-btn-styling;
+            }
+
+        }
+
+
+        select {
+            color: $dark_grey;
+            width: 100%;
+        }
+    }
+
+}

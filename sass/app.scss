@@ -1,4 +1,5 @@
 // Abstract
+@import "abstract/mixins";
 @import "abstract/colors";
 
 // Layout
@@ -9,4 +10,5 @@
 @import "components/header";
 @import "components/slidebar";
 @import "components/button";
-@import "components/anime_card"
+@import "components/anime_card";
+@import "components/filter_bar";
