@@ -55,7 +55,73 @@
         .option_grid {
             display: grid;
             grid-template-columns: auto auto;
+
+            .option {
+
+                .container {
+                    display: block;
+                    position: relative;
+                    padding-left: 30px;
+                    cursor: pointer;
+                    -webkit-user-select: none;
+                    -moz-user-select: none;
+                    -ms-user-select: none;
+                    user-select: none;
+                    font-weight: 400;  
+                    
+                    .checkmark {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        height: 20px;
+                        width: 20px;
+                        // background-color: #eee;
+                        border: solid thin $grey;
+
+                        &::after {
+                            content: "";
+                            position: absolute;
+                            // display: none;
+                            left: 7px;
+                            top: 3px;
+                            width: 5px;
+                            height: 10px;
+                            border: solid $grey;
+                            opacity: 0;
+                            border-width: 0 3px 3px 0;
+                            -webkit-transform: rotate(45deg);
+                            -ms-transform: rotate(45deg);
+                            transform: rotate(45deg);
+                        }
+                    }
+
+                    &:hover input ~ .checkmark {        
+                        &::after {
+                            opacity: 0.7;
+                        }
+                    }
+
+                    input {
+                        position: absolute;
+                        opacity: 0;
+                        cursor: pointer;
+                        height: 0;
+                        width: 0;
+
+                        &:checked {
+                            & ~ .checkmark {
+                                background-color: $purple;
+                            }
+
+                            & ~ .checkmark:after {
+                                border: solid $white;
+                                opacity: 1;
+                                border-width: 0 3px 3px 0;
+                            }
+                        }
+                    }
+                }
+            }
         }
     }
-
 }

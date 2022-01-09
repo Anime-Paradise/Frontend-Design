@@ -502,6 +502,63 @@ body {
       grid-template-columns: auto auto;
 }
 
+.sorting_panel .genre .option_grid .option .container {
+  display: block;
+  position: relative;
+  padding-left: 30px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  font-weight: 400;
+}
+
+.sorting_panel .genre .option_grid .option .container .checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 20px;
+  width: 20px;
+  border: solid thin #373F53;
+}
+
+.sorting_panel .genre .option_grid .option .container .checkmark::after {
+  content: "";
+  position: absolute;
+  left: 7px;
+  top: 3px;
+  width: 5px;
+  height: 10px;
+  border: solid #373F53;
+  opacity: 0;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.sorting_panel .genre .option_grid .option .container:hover input ~ .checkmark::after {
+  opacity: 0.7;
+}
+
+.sorting_panel .genre .option_grid .option .container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.sorting_panel .genre .option_grid .option .container input:checked ~ .checkmark {
+  background-color: #8401FF;
+}
+
+.sorting_panel .genre .option_grid .option .container input:checked ~ .checkmark:after {
+  border: solid #FFFFFF;
+  opacity: 1;
+  border-width: 0 3px 3px 0;
+}
+
 * {
   scrollbar-width: auto;
   scrollbar-color: #8401FF #2329355b;
