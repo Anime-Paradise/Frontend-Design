@@ -44,6 +44,35 @@ body {
   padding: 0px 10px;
 }
 
+.header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 80px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 10px;
+}
+
+.header .logo {
+  margin-right: 20px;
+}
+
+.header .profile_btn {
+  background: transparent;
+  border: none;
+  color: #fff;
+  padding: 15px 17px;
+  border-radius: 50%;
+  -webkit-transition: background 0.2s;
+  transition: background 0.2s;
+}
+
+.header .profile_btn:active {
+  background: #373f535e;
+}
+
 .navbar {
   height: 100vh;
   width: 60px;
@@ -100,84 +129,68 @@ body {
   background: #232935;
 }
 
-.header {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  height: 80px;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  padding: 10px;
+.checkbox-container {
+  display: block;
+  position: relative;
+  padding-left: 30px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  font-weight: 400;
 }
 
-.header .logo {
-  margin-right: 20px;
-}
-
-.header .search_bar {
-  height: 50px;
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.header .search_bar .search_input {
-  background: #232935;
-  border: none;
-  width: 400px;
-  border-radius: 12px;
-  margin: 0px 10px;
-  -webkit-transition: -webkit-box-shadow 0.2s;
-  transition: -webkit-box-shadow 0.2s;
-  transition: box-shadow 0.2s;
-  transition: box-shadow 0.2s, -webkit-box-shadow 0.2s;
-  padding: 0px 20px;
-  color: #E2E2E2;
-  text-transform: capitalize;
-}
-
-.header .search_bar .search_input:focus {
-  -webkit-box-shadow: 0 0 0px 3px #23293598;
-          box-shadow: 0 0 0px 3px #23293598;
-}
-
-.header .search_bar .search_btn {
-  background: #8401FF;
-  color: #FFFFFF;
-  border: none;
-  padding: 0px 20px;
-  border-radius: 12px;
-  -webkit-transition: background 0.2s, -webkit-box-shadow 0.2s;
-  transition: background 0.2s, -webkit-box-shadow 0.2s;
-  transition: box-shadow 0.2s, background 0.2s;
-  transition: box-shadow 0.2s, background 0.2s, -webkit-box-shadow 0.2s;
-}
-
-.header .search_bar .search_btn:active {
-  background: #6e00d4;
-  -webkit-box-shadow: 0 0 0px 3px #6d00d427;
-          box-shadow: 0 0 0px 3px #6d00d427;
-}
-
-.header .profile_btn {
-  background: transparent;
-  border: none;
-  color: #fff;
-  padding: 15px 17px;
-  border-radius: 50%;
+.checkbox-container .checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 20px;
+  width: 20px;
+  border: solid thin #373F53;
   -webkit-transition: background 0.2s;
   transition: background 0.2s;
 }
 
-.header .profile_btn:active {
-  background: #373f535e;
+.checkbox-container .checkmark::after {
+  content: "";
+  position: absolute;
+  left: 7px;
+  top: 3px;
+  width: 5px;
+  height: 10px;
+  border: solid #373F53;
+  opacity: 0;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+  -webkit-transition: opacity 0.2s;
+  transition: opacity 0.2s;
 }
 
-.slidebar {
+.checkbox-container:hover input ~ .checkmark::after {
+  opacity: 0.7;
+}
+
+.checkbox-container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.checkbox-container input:checked ~ .checkmark {
+  background-color: #8401FF;
+}
+
+.checkbox-container input:checked ~ .checkmark:after {
+  border: solid #FFFFFF;
+  opacity: 1;
+  border-width: 0 3px 3px 0;
+}
+
+.carousel {
   background-size: cover;
   border-radius: 12px;
   display: -webkit-box;
@@ -190,7 +203,7 @@ body {
   overflow: hidden;
 }
 
-.slidebar .filter_layer {
+.carousel .filter_layer {
   position: absolute;
   background: #2329355b;
   height: 100%;
@@ -199,7 +212,7 @@ body {
   border-radius: 12px;
 }
 
-.slidebar .background {
+.carousel .background {
   background: url(https://cdn.myanimelist.net/images/anime/1386/100624.jpg) center center;
   position: absolute;
   height: 100%;
@@ -212,14 +225,14 @@ body {
   opacity: 0.4;
 }
 
-.slidebar .cover {
+.carousel .cover {
   width: 400px;
   background: url(https://cdn.myanimelist.net/images/anime/1386/100624.jpg) center center;
   background-size: cover;
   border-radius: 12px 0px 0px 12px;
 }
 
-.slidebar .info {
+.carousel .info {
   padding: 25px 30px 25px 30px;
   text-align: justify;
   display: -webkit-box;
@@ -233,19 +246,19 @@ body {
   font-size: 13px;
 }
 
-.slidebar .info .heading {
+.carousel .info .heading {
   font-size: 24px;
   font-weight: 600;
 }
 
-.slidebar .info .description {
+.carousel .info .description {
   padding: 10px 0px;
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
 }
 
-.slidebar .info .change_btn {
+.carousel .info .change_btn {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -256,7 +269,7 @@ body {
   cursor: pointer;
 }
 
-.slidebar .info .change_btn span:hover {
+.carousel .info .change_btn span:hover {
   color: #E2E2E2;
 }
 
@@ -312,7 +325,36 @@ body {
 }
 
 .btn.active {
+  background: #232935;
+  color: #E2E2E2;
+  border: none;
+  border-radius: 8px;
+  -webkit-transition: background 0.2s, -webkit-box-shadow 0.2s;
+  transition: background 0.2s, -webkit-box-shadow 0.2s;
+  transition: box-shadow 0.2s, background 0.2s;
+  transition: box-shadow 0.2s, background 0.2s, -webkit-box-shadow 0.2s;
+  padding: 10px 20px;
+  outline: none;
   background: #8401FF;
+}
+
+.btn.active:hover {
+  background: #2329355b;
+  color: #E2E2E2;
+}
+
+.btn.active:active {
+  background: #6e00d4;
+  -webkit-box-shadow: 0 0 0px 3px #6d00d427;
+          box-shadow: 0 0 0px 3px #6d00d427;
+}
+
+.btn.active:focus {
+  color: #E2E2E2;
+}
+
+.btn.active:visited {
+  color: #E2E2E2;
 }
 
 .btn.active:active {
@@ -322,6 +364,7 @@ body {
 }
 
 .btn.active:hover {
+  background: #6e00d4;
   color: #E2E2E2;
 }
 
@@ -453,7 +496,7 @@ body {
 }
 
 .sorting_panel .release_date .selector_row button, .sorting_panel .streaming_type .selector_row button {
-  background: #8401FF;
+  background: #232935;
   color: #E2E2E2;
   border: none;
   border-radius: 8px;
@@ -463,10 +506,11 @@ body {
   transition: box-shadow 0.2s, background 0.2s, -webkit-box-shadow 0.2s;
   padding: 10px 20px;
   outline: none;
+  background: #8401FF;
 }
 
 .sorting_panel .release_date .selector_row button:hover, .sorting_panel .streaming_type .selector_row button:hover {
-  background: #6e00d4;
+  background: #2329355b;
   color: #E2E2E2;
 }
 
@@ -474,6 +518,25 @@ body {
   background: #6e00d4;
   -webkit-box-shadow: 0 0 0px 3px #6d00d427;
           box-shadow: 0 0 0px 3px #6d00d427;
+}
+
+.sorting_panel .release_date .selector_row button:focus, .sorting_panel .streaming_type .selector_row button:focus {
+  color: #E2E2E2;
+}
+
+.sorting_panel .release_date .selector_row button:visited, .sorting_panel .streaming_type .selector_row button:visited {
+  color: #E2E2E2;
+}
+
+.sorting_panel .release_date .selector_row button:active, .sorting_panel .streaming_type .selector_row button:active {
+  background: #6e00d4;
+  -webkit-box-shadow: 0 0 0px 3px #6d00d427;
+          box-shadow: 0 0 0px 3px #6d00d427;
+}
+
+.sorting_panel .release_date .selector_row button:hover, .sorting_panel .streaming_type .selector_row button:hover {
+  background: #6e00d4;
+  color: #E2E2E2;
 }
 
 .sorting_panel .release_date .selector_row button:focus, .sorting_panel .streaming_type .selector_row button:focus {
@@ -502,67 +565,6 @@ body {
       grid-template-columns: auto auto;
 }
 
-.sorting_panel .genre .option_grid .option .container {
-  display: block;
-  position: relative;
-  padding-left: 30px;
-  cursor: pointer;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  font-weight: 400;
-}
-
-.sorting_panel .genre .option_grid .option .container .checkmark {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 20px;
-  width: 20px;
-  border: solid thin #373F53;
-  -webkit-transition: background 0.2s;
-  transition: background 0.2s;
-}
-
-.sorting_panel .genre .option_grid .option .container .checkmark::after {
-  content: "";
-  position: absolute;
-  left: 7px;
-  top: 3px;
-  width: 5px;
-  height: 10px;
-  border: solid #373F53;
-  opacity: 0;
-  border-width: 0 3px 3px 0;
-  -webkit-transform: rotate(45deg);
-  transform: rotate(45deg);
-  -webkit-transition: opacity 0.2s;
-  transition: opacity 0.2s;
-}
-
-.sorting_panel .genre .option_grid .option .container:hover input ~ .checkmark::after {
-  opacity: 0.7;
-}
-
-.sorting_panel .genre .option_grid .option .container input {
-  position: absolute;
-  opacity: 0;
-  cursor: pointer;
-  height: 0;
-  width: 0;
-}
-
-.sorting_panel .genre .option_grid .option .container input:checked ~ .checkmark {
-  background-color: #8401FF;
-}
-
-.sorting_panel .genre .option_grid .option .container input:checked ~ .checkmark:after {
-  border: solid #FFFFFF;
-  opacity: 1;
-  border-width: 0 3px 3px 0;
-}
-
 * {
   scrollbar-width: auto;
   scrollbar-color: #8401FF #2329355b;
@@ -580,5 +582,53 @@ body {
 *::-webkit-scrollbar-thumb {
   background-color: #8f54a0;
   border-radius: 10px;
+}
+
+.search_bar {
+  height: 50px;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.search_bar .search_input {
+  background: #232935;
+  border: none;
+  width: 400px;
+  border-radius: 12px;
+  margin: 0px 10px;
+  -webkit-transition: -webkit-box-shadow 0.2s;
+  transition: -webkit-box-shadow 0.2s;
+  transition: box-shadow 0.2s;
+  transition: box-shadow 0.2s, -webkit-box-shadow 0.2s;
+  padding: 0px 20px;
+  color: #E2E2E2;
+  text-transform: capitalize;
+}
+
+.search_bar .search_input:focus {
+  -webkit-box-shadow: 0 0 0px 3px #23293598;
+          box-shadow: 0 0 0px 3px #23293598;
+}
+
+.search_bar .search_btn {
+  background: #8401FF;
+  color: #FFFFFF;
+  border: none;
+  padding: 0px 20px;
+  border-radius: 12px;
+  -webkit-transition: background 0.2s, -webkit-box-shadow 0.2s;
+  transition: background 0.2s, -webkit-box-shadow 0.2s;
+  transition: box-shadow 0.2s, background 0.2s;
+  transition: box-shadow 0.2s, background 0.2s, -webkit-box-shadow 0.2s;
+}
+
+.search_bar .search_btn:active {
+  background: #6e00d4;
+  -webkit-box-shadow: 0 0 0px 3px #6d00d427;
+          box-shadow: 0 0 0px 3px #6d00d427;
 }
 /*# sourceMappingURL=app.css.map */

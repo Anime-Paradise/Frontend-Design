@@ -1,0 +1,22 @@
+.header {
+    display: flex;
+    height: 80px;
+    align-items: center;
+    padding: 10px;
+
+    .logo {
+        margin-right: 20px;
+    }
+
+    .profile_btn {
+        background: transparent;
+        border: none;
+        color: #fff;
+        padding: 15px 17px;
+        border-radius: 50%;
+        transition: background 0.2s;
+    }
+    .profile_btn:active {
+        background: $grey_opacity;
+    }
+}

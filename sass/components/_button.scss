@@ -1,21 +1,5 @@
-.btn_cluster {
-    display: flex;
-    margin: 10px 0px;
-
-    button {
-        border-radius: 0px;
-    }
-
-    button:first-child {
-        border-radius: 8px 0px 0px 8px;
-    }
-    
-    button:last-child {
-        border-radius: 0px 8px 8px 0px;
-    }
-}
-
-.btn {
+// Mixin
+@mixin btn {
     background: $mild_dark_purple;
     color: $shaded_white;
     border: none;
@@ -43,7 +27,8 @@
     }
 }
 
-.btn.active {
+@mixin btn-active {
+    @include btn;
     background: $purple;
 
     &:active {
@@ -52,6 +37,7 @@
     }
 
     &:hover {
+        background: $purple_dark;
         color: $shaded_white;
     }
 
@@ -62,4 +48,30 @@
     &:visited {
         color: $shaded_white;
     }
+}
+
+// Component Styling
+.btn_cluster {
+    display: flex;
+    margin: 10px 0px;
+
+    button {
+        border-radius: 0px;
+    }
+
+    button:first-child {
+        border-radius: 8px 0px 0px 8px;
+    }
+    
+    button:last-child {
+        border-radius: 0px 8px 8px 0px;
+    }
+}
+
+.btn {
+    @include btn;
+}
+
+.btn.active {
+    @include btn-active;
 }

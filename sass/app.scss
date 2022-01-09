@@ -1,15 +1,16 @@
 // Abstract
-@import "abstract/mixins";
 @import "abstract/colors";
 
 // Layout
 @import "layout/layout";
+@import "layout/header";
+@import "layout/navbar";
 
 // Components
-@import "components/navbar";
-@import "components/header";
-@import "components/slidebar";
+@import "components/checkbox";
+@import "components/carousel";
 @import "components/button";
 @import "components/anime_card";
 @import "components/sorting_panel";
-@import "components/custom_scroll_bar";
+@import "components/scroll_bar";
+@import "components/search_bar"
