@@ -1,0 +1,61 @@
+.sorting_panel {
+    background-color: $mild_dark_purple;
+    color: $white;
+    box-sizing: border-box;
+    border-radius: 12px;
+    padding: 20px;
+
+    .release_date, .streaming_type {
+        
+        .title_row {
+            display: grid;
+            grid-template-columns: 1fr 1.45fr; 
+            color: $white;
+            
+        }
+
+        .selector_row {
+            display: grid;
+            grid-template-columns: 1fr 1fr 0.5fr;
+            grid-column-gap: 10px; 
+            margin: 10px 0px 0px 0px;       
+
+            select {
+                background: $grey;
+                border: none;
+                box-sizing: border-box;
+                border-radius: 8px;
+                padding: 0px 8px;
+                transition: background 0.2s, box-shadow 0.2s;
+
+                &:hover {
+                    background: $grey_opacity;
+                }
+                
+                &:focus {
+                   box-shadow: 0 0 0px 3px #2d354460;
+                }
+            }
+
+            button {
+                @include default-btn-styling;
+            }
+        }
+    }
+
+    .genre {
+        margin: 0px 0px 60px 0px;
+        .title {
+            font-size: 24px;
+            text-align: center;
+            padding: 30px 0px;
+            font-weight: 600;
+        }
+
+        .option_grid {
+            display: grid;
+            grid-template-columns: auto auto;
+        }
+    }
+
+}

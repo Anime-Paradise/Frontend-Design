@@ -41,7 +41,7 @@ body {
           flex-direction: column;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  padding: 0px 20px;
+  padding: 0px 10px;
 }
 
 .navbar {
@@ -263,7 +263,7 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin: 15px 0px;
+  margin: 10px 0px;
 }
 
 .btn_cluster button {
@@ -403,48 +403,55 @@ body {
   color: #FFC542;
 }
 
-.filter_bar {
+.sorting_panel {
   background-color: #232935;
   color: #FFFFFF;
-  padding: 20px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   border-radius: 12px;
+  padding: 20px;
 }
 
-.filter_bar .release_date {
+.sorting_panel .release_date .title_row, .sorting_panel .streaming_type .title_row {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: auto auto auto;
-      grid-template-columns: auto auto auto;
+  -ms-grid-columns: 1fr 1.45fr;
+      grid-template-columns: 1fr 1.45fr;
+  color: #FFFFFF;
+}
+
+.sorting_panel .release_date .selector_row, .sorting_panel .streaming_type .selector_row {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 0.5fr;
+      grid-template-columns: 1fr 1fr 0.5fr;
   grid-column-gap: 10px;
+  margin: 10px 0px 0px 0px;
 }
 
-.filter_bar .release_date .year .title {
-  margin-bottom: 5px;
+.sorting_panel .release_date .selector_row select, .sorting_panel .streaming_type .selector_row select {
+  background: #373F53;
+  border: none;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 8px;
+  padding: 0px 8px;
+  -webkit-transition: background 0.2s, -webkit-box-shadow 0.2s;
+  transition: background 0.2s, -webkit-box-shadow 0.2s;
+  transition: background 0.2s, box-shadow 0.2s;
+  transition: background 0.2s, box-shadow 0.2s, -webkit-box-shadow 0.2s;
 }
 
-.filter_bar .release_date .season .title {
-  margin-bottom: 5px;
+.sorting_panel .release_date .selector_row select:hover, .sorting_panel .streaming_type .selector_row select:hover {
+  background: #373f535e;
 }
 
-.filter_bar .release_date .submit {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
+.sorting_panel .release_date .selector_row select:focus, .sorting_panel .streaming_type .selector_row select:focus {
+  -webkit-box-shadow: 0 0 0px 3px #2d354460;
+          box-shadow: 0 0 0px 3px #2d354460;
 }
 
-.filter_bar .release_date .submit button {
+.sorting_panel .release_date .selector_row button, .sorting_panel .streaming_type .selector_row button {
   background: #8401FF;
   color: #E2E2E2;
   border: none;
@@ -457,27 +464,40 @@ body {
   outline: none;
 }
 
-.filter_bar .release_date .submit button:hover {
+.sorting_panel .release_date .selector_row button:hover, .sorting_panel .streaming_type .selector_row button:hover {
   background: #6e00d4;
   color: #E2E2E2;
 }
 
-.filter_bar .release_date .submit button:active {
+.sorting_panel .release_date .selector_row button:active, .sorting_panel .streaming_type .selector_row button:active {
   background: #6e00d4;
   -webkit-box-shadow: 0 0 0px 3px #6d00d427;
           box-shadow: 0 0 0px 3px #6d00d427;
 }
 
-.filter_bar .release_date .submit button:focus {
+.sorting_panel .release_date .selector_row button:focus, .sorting_panel .streaming_type .selector_row button:focus {
   color: #E2E2E2;
 }
 
-.filter_bar .release_date .submit button:visited {
+.sorting_panel .release_date .selector_row button:visited, .sorting_panel .streaming_type .selector_row button:visited {
   color: #E2E2E2;
 }
 
-.filter_bar .release_date select {
-  color: #313131;
-  width: 100%;
+.sorting_panel .genre {
+  margin: 0px 0px 60px 0px;
+}
+
+.sorting_panel .genre .title {
+  font-size: 24px;
+  text-align: center;
+  padding: 30px 0px;
+  font-weight: 600;
+}
+
+.sorting_panel .genre .option_grid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto auto;
+      grid-template-columns: auto auto;
 }
 /*# sourceMappingURL=app.css.map */
