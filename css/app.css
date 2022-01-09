@@ -137,6 +137,7 @@ body {
   transition: box-shadow 0.2s, -webkit-box-shadow 0.2s;
   padding: 0px 20px;
   color: #E2E2E2;
+  text-transform: capitalize;
 }
 
 .header .search_bar .search_input:focus {
@@ -499,5 +500,24 @@ body {
   display: grid;
   -ms-grid-columns: auto auto;
       grid-template-columns: auto auto;
+}
+
+* {
+  scrollbar-width: auto;
+  scrollbar-color: #8401FF #2329355b;
+}
+
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 8px;
+}
+
+*::-webkit-scrollbar-track {
+  background: #23293598;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #8f54a0;
+  border-radius: 10px;
 }
 /*# sourceMappingURL=app.css.map */

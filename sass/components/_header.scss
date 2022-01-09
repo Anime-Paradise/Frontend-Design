@@ -22,6 +22,7 @@
             transition: box-shadow 0.2s;
             padding: 0px 20px;
             color: $shaded_white;
+            text-transform: capitalize;
         }
 
         .search_input:focus {

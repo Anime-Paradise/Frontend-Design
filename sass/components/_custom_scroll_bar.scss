@@ -1,0 +1,20 @@
+* {
+    scrollbar-width: auto;
+    scrollbar-color: $purple $mild_dark_purple_opacity;
+}
+
+
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+    width: 8px;
+}
+
+*::-webkit-scrollbar-track {
+    background: $mild_dark_purple_mild_opacity;
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: #8f54a0;
+    border-radius: 10px;
+    // border: 3px solid #ffffff;
+}
