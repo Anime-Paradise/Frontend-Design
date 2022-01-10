@@ -648,7 +648,7 @@ body {
 
 * {
   scrollbar-width: auto;
-  scrollbar-color: #8401FF #2329355b;
+  scrollbar-color: #8401FF #8401FF;
 }
 
 /* Chrome, Edge, and Safari */
@@ -657,7 +657,7 @@ body {
 }
 
 *::-webkit-scrollbar-track {
-  background: #23293598;
+  background: #8401FF;
 }
 
 *::-webkit-scrollbar-thumb {
