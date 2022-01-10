@@ -29,7 +29,7 @@
                 transition: background 0.2s, box-shadow 0.2s;
 
                 &:hover {
-                    background: $grey_opacity;
+                    background: rgba($grey, 0.3);
                 }
                 
                 &:focus {

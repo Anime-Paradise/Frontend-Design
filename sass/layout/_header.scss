@@ -17,6 +17,6 @@
         transition: background 0.2s;
     }
     .profile_btn:active {
-        background: $grey_opacity;
+        background: rgba($grey, 0.4);
     }
 }

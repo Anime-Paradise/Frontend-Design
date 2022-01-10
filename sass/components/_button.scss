@@ -14,8 +14,8 @@
     }
 
     &:active {
-        background: $purple_dark;
-        box-shadow: 0 0 0px 3px $purple_dark_opacity;
+        background: $dim_purple;
+        box-shadow: 0 0 0px 3px rgba($dim_purple, 0.3);
     }
 
     &:focus {
@@ -32,12 +32,12 @@
     background: $purple;
 
     &:active {
-        background: $purple_dark;
-        box-shadow: 0 0 0px 3px $purple_dark_opacity;
+        background: $dim_purple;
+        box-shadow: 0 0 0px 3px rgba($dim_purple, 0.3);
     }
 
     &:hover {
-        background: $purple_dark;
+        background: $dim_purple;
         color: $shaded_white;
     }
 
