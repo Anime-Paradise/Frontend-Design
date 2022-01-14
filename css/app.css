@@ -752,4 +752,93 @@ body {
   -webkit-box-shadow: 0 0 0px 3px rgba(110, 0, 212, 0.3);
           box-shadow: 0 0 0px 3px rgba(110, 0, 212, 0.3);
 }
+
+.playlist {
+  background: #232935;
+  color: #fff;
+  border-radius: 8px;
+}
+
+.playlist .playlist_header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border-bottom: solid thin #343B49;
+}
+
+.playlist .playlist_header .info {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  padding: 20px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.playlist .playlist_header .info .title {
+  font-weight: 600;
+}
+
+.playlist .playlist_header .toggle_btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 10px 20px;
+}
+
+.playlist .item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100px;
+  border-bottom: solid thin #343B49;
+  position: relative;
+}
+
+.playlist .item .is_active {
+  background: #eeff00;
+  height: 100%;
+  width: 3px;
+  position: absolute;
+  opacity: 0;
+}
+
+.playlist .item.active .is_active {
+  opacity: 1;
+}
+
+.playlist .item .thumbnail {
+  background: url(https://cdn.myanimelist.net/images/anime/1524/110802.jpg) center center;
+  height: 100%;
+  width: 150px;
+  border: none;
+}
+
+.playlist .item .info {
+  padding: 10px 24px;
+}
+
+.playlist .item .info .title {
+  margin-bottom: 10px;
+}
+
+.playlist .item .info .join_forum {
+  border: none;
+  background: #389ee73a;
+  color: #0194FF;
+  border-radius: 100px;
+  padding: 6px 16px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.playlist .item .info .join_forum span {
+  margin-right: 5px;
+}
 /*# sourceMappingURL=app.css.map */

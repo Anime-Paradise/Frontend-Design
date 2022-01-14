@@ -1,0 +1,74 @@
+.playlist {
+    background: #232935;
+    color: #fff;
+    border-radius: 8px;
+    
+    .playlist_header {
+        display: flex;
+        border-bottom: solid thin #343B49;
+
+        .info {
+            flex: 1;
+            padding: 20px;
+            box-sizing: border-box;
+
+            .title {
+                font-weight: 600;
+            }
+        }
+        .toggle_btn {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 10px 20px;
+        }
+    }
+
+    .item {
+        display: flex;
+        height: 100px;
+        border-bottom: solid thin #343B49;
+        position: relative;
+
+        .is_active {
+            background: #eeff00;
+            height: 100%;
+            width: 3px;
+            position: absolute;
+            opacity: 0;
+        }
+
+        &.active .is_active {
+            opacity: 1;
+        }
+
+        .thumbnail {
+            background: url(https://cdn.myanimelist.net/images/anime/1524/110802.jpg) center center;
+            height: 100%;
+            width: 150px;
+            border: none;
+        }
+        
+        .info {
+            padding: 10px 24px;
+
+            .title {
+                margin-bottom: 10px;
+            }
+            
+            .join_forum {
+                border: none;
+                background: #389ee73a;
+                color: #0194FF;
+                border-radius: 100px;
+                padding: 6px 16px;
+                font-size: 12px;
+                font-weight: 600;
+                
+                span {
+                    margin-right: 5px;
+                }
+            }
+        }
+    }
+}
