@@ -657,11 +657,11 @@ body {
 }
 
 *::-webkit-scrollbar-track {
-  background: #23293598;
+  background: #2329355b;
 }
 
 *::-webkit-scrollbar-thumb {
-  background-color: #8f54a0;
+  background-color: #2329355b;
   border-radius: 10px;
 }
 
