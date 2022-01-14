@@ -21,6 +21,13 @@
             justify-content: center;
             align-items: center;
             padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 0px 8px 0px 0px;
+            transition: background 0.2s;
+
+            &:hover {
+                background: #343B49;
+            }
         }
     }
 
@@ -29,6 +36,12 @@
         height: 100px;
         border-bottom: solid thin #343B49;
         position: relative;
+        cursor: pointer;
+        transition: background 0.2s;
+
+        &:hover {
+            background: #343B49;
+        }
 
         .is_active {
             background: #eeff00;
@@ -64,9 +77,15 @@
                 padding: 6px 16px;
                 font-size: 12px;
                 font-weight: 600;
+                transition: background 0.2s, color 0.2s;
                 
                 span {
                     margin-right: 5px;
+                }
+
+                &:hover {
+                    background: #0194FF;
+                    color: #fff;
                 }
             }
         }
